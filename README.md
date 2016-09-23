@@ -11,4 +11,18 @@ Find css reset file to include before _base.scss
 normalize.scss
 https://github.com/JohnAlbin/normalize-scss
 
+######Rob:
+SCSS
+Images
+Clean up HTML, etc
 
+
+######Max:
+JS
+Modernizr
+Livereload
+
+
+######Nice to have:
+Dynamic Readme
+Changelog
