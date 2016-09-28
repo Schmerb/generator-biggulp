@@ -2,8 +2,6 @@
 //  imports
 //////////////////////////////////////*/
 
-@import "compass/reset";
-@import "compass/css3";
 @import "bourbon/bourbon";
 @import "neat/neat";
 
@@ -54,7 +52,7 @@ $width:1024px;
 $max-width:1024px;
 
 *{
-    @include box-sizing(border-box);
+    box-sizing: border-box;
 }
 
 .block{
@@ -160,14 +158,6 @@ button,input[type="submit"]{
     overflow: hidden;
 }
 
-%opacity0{
-    @include opacity(0);
-}
-
-%opacity1{
-    @include opacity(1);
-}
-
 %psuedo-content{
     content:" ";
     display:block;
@@ -183,16 +173,8 @@ body{
     font-size:62.5%;
     position:relative;
 }
-.no-scroll {
-    overflow: hidden;
-}
 
 html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-main {
-    width: 100%;
-    float: left;
 }

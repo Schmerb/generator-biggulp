@@ -1,20 +1,11 @@
 'use strict';
-
-console.log('testing!');
-
-
 var hello = function(message) {
     console.log(message);
 };
 
 
+function whatsUp(test) {
+    $('h1').text(test);
+}
 
-hello("testing!");
-hello("testing!");
-hello("testing!");
-hello("testing!");
-hello("testing!");
-hello("testing!");
-hello("test");
-
-
+whatsUp('Rob!');

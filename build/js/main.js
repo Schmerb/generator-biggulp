@@ -1,8 +1,5 @@
-console.log('hello!');
 
 
-
-testing();
 
 
 
