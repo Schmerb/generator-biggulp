@@ -20,7 +20,13 @@ Clean up HTML, etc
 ######Max:
 JS
 Modernizr
-Livereload
+    * Crawl website for references
+    * Use full on dev version for build
+    * Compile on deploy for production
+
+~~Livereload~~ `livereload()` can be called anywhere in gulp file to trigger a refresh
+
+
 
 
 ######Nice to have:

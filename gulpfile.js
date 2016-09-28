@@ -35,7 +35,11 @@ gulp.task('build-scss', function() {
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('html/css'))
         .pipe(livereload());
-})
+});
+gulp.task('build-html', function() {
+    return gulp.src('html/**/*.html')
+        .pipe(livereload());
+});
 
 
 
@@ -44,4 +48,5 @@ gulp.task('watch', function() {
     livereload.listen();
     gulp.watch('build/js/**/*.js', ['jshint', 'build-js']);
     gulp.watch('build/scss/**/*.scss', ['build-scss']);
+    gulp.watch('html/**/*.html', ['build-html']);
 });

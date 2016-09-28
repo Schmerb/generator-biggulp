@@ -1,1 +1,1 @@
-"use strict";function whatsUp(o){$("h1").text(o)}var hello=function(o){console.log(o)};whatsUp("Rob!");
+"use strict";function whatsUp(t){$("h1").text(t)}var hello=function(t){console.log(t)};
