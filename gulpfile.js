@@ -38,6 +38,11 @@ gulp.task('build-scss', function() {
         .pipe(livereload());
 });
 
+gulp.task('build-html', function() {
+    return gulp.src('html/**/*.html')
+        .pipe(livereload());
+});
+
 gulp.task('build-images', function(){
     return gulp.src('build/img/*.*')
         .pipe(imagemin())
@@ -50,4 +55,5 @@ gulp.task('watch', function() {
     gulp.watch('build/js/**/*.js', ['jshint', 'build-js']);
     gulp.watch('build/scss/**/*.scss', ['build-scss']);
     gulp.watch('build/img/*.*', ['build-images']);
+    gulp.watch('html/**/*.html', ['build-html']);
 });

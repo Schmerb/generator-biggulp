@@ -8,4 +8,4 @@ function whatsUp(test) {
     $('h1').text(test);
 }
 
-whatsUp('Rob!');
+// whatsUp('Rob!');
