@@ -8,7 +8,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     sassGlob = require('gulp-sass-glob'),
-    livereload = require('gulp-livereload');
+    livereload = require('gulp-livereload'),
+    imagemin = require('gulp-imagemin');
 
 
 gulp.task('jshint', function() {
@@ -35,13 +36,18 @@ gulp.task('build-scss', function() {
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('html/css'))
         .pipe(livereload());
-})
+});
 
-
-
-// 
+gulp.task('build-images', function(){
+    return gulp.src('build/img/*.*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('html/img'))
+        .pipe(livereload());
+});
+ 
 gulp.task('watch', function() {
     livereload.listen();
     gulp.watch('build/js/**/*.js', ['jshint', 'build-js']);
     gulp.watch('build/scss/**/*.scss', ['build-scss']);
+    gulp.watch('build/img/*.*', ['build-images']);
 });
