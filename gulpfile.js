@@ -29,7 +29,7 @@ gulp.task('build-js', function() {
 });
 
 gulp.task('build-scss', function() {
-    return gulp.src('build/scss/*.scss')
+    return gulp.src('build/scss/**/*.scss')
         .pipe(sassGlob())
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))

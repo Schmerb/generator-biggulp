@@ -4,6 +4,12 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/) 
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.0.3 - 2016-10-02 14:45
+- adding in scss base styles
+- adding in atomic design and globbing
+- adding in normalize
+- updated html to include async js
+
 ## 0.0.2 - 2016-09-29
 - adding in images task
 - adding in modernizr

@@ -3,7 +3,7 @@ We finally caved and are making the switch, stay tuned for a highly customizable
 
 ## TO-DO:
 - Find css reset file to include before _base.scss
-- normalize.scss
+- ~~normalize.scss~~
   - https://github.com/JohnAlbin/normalize-scss
 
 ### Rob:
@@ -24,4 +24,4 @@ We finally caved and are making the switch, stay tuned for a highly customizable
 ##### Nice to have:
 
 - Dynamic Readme
-- Changelog
+- ~~Changelog~~

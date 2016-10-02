@@ -1,108 +1,63 @@
 /*//////////////////////////////////////
-//  imports
+// Imports
 //////////////////////////////////////*/
-
 @import "bourbon/bourbon";
 @import "neat/neat";
 
-/*//////////////////////////////////////
-//  colors
-//////////////////////////////////////*/
-
-$facebook:  #3c5290;
-$twitter:   #469aea;
-$instagram: #1b3f67;
-$linkedin:  #3574af;
-$googleplus:#FC1327;
-$pinterest: #D20010;
-$evernote:  #58BD2F;
-$behance:   #005CFF;
-$tumblr:    #1E4865;
-$digg:      #2F75AE;
-$dribbble:  #FF3488;
-$vimeo:     #00BFFF;
-$youtube:   #FF0000;
-$blogger:   #FF2F00;
-
 //////////////////
-// Website Colors
+// Colors
 //////////////////
-
-
-$light: #FFF;
-$dark: #000;
-
-$primary: #b6b6b6;
-$secondary: #b1b1b1;
-
+$palettes: (
+    primary: (
+        base:   hsla(86, 51%, 53%, 1),
+        light:  hsla(86, 51%, 69%, 1),
+        dark:   hsla(86, 51%, 23%, 1)
+    ),
+    light: (
+        base:   #fff
+    ),
+    dark: (
+        base:   #000
+    ),
+    social: (
+        facebook:  #3c5290,
+        twitter:   #469aea,
+        instagram: #1b3f67,
+        linkedin:  #3574af,
+        googleplus:#FC1327,
+        pinterest: #D20010,
+        evernote:  #58BD2F,
+        behance:   #005CFF,
+        tumblr:    #1E4865,
+        digg:      #2F75AE,
+        dribbble:  #FF3488,
+        vimeo:     #00BFFF,
+        youtube:   #FF0000,
+        blogger:   #FF2F00
+    )
+);
 
 /*//////////////////////////////////////
-//  fonts
+//  Fonts
 //////////////////////////////////////*/
-$font-sans: helvetica;
-$font-serif: georgia;
-
-
+$fontStack: (
+    sans: (
+        regular: $helvetica
+    ),
+    serif: (
+        regular: $georgia
+    )
+);
 
 /*//////////////////////////////////////
-//  extension on skeleton
+//  Extension on skeleton
 //////////////////////////////////////*/
 $grid-columns: 12;
-$width:1024px;
-$max-width:1024px;
-
-*{
-    box-sizing: border-box;
-}
-
-.block{
-    @extend %block;
-    @include clearfix;
-}
-
-.disable-hover{
-    pointer-events:none;
-}
-
-b,strong{
-    font-weight:700;
-}
-
-i,em{
-    font-style:italic;
-}
-
-input,button{
-    @include appearance(none);
-    outline: none;
-    border: none;
-    background: transparent;
-}
-
-input:focus, textarea:focus,button,input[type="submit"]{
-    outline:none;
-}
-
-button,input[type="submit"]{
-    cursor:pointer;
-}
-
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background-color:$primary;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: rgba($dark,1);
-}
+$width:1200px;
+$max-width:1200px;
 
 /*//////////////////////////////////////
-//  mixins
+//  Mixins
 //////////////////////////////////////*/
 
 @mixin input-placeholder {
@@ -112,11 +67,20 @@ button,input[type="submit"]{
     &::-webkit-input-placeholder { @content; }
 }
 
+/*//////////////////////////////////////
+//  Functions
+//////////////////////////////////////*/
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($palettes, $palette), $tone);
+}
+
+@function type($font, $tone: 'regular') {
+    @return map-get(map-get($fontStack, $font), $tone);
+}
 
 /*//////////////////////////////////////
-//  silent classes
+//  Silent Classes
 //////////////////////////////////////*/
-
 %block{
     max-width:$width;
     width:100%;
@@ -127,11 +91,6 @@ button,input[type="submit"]{
 %marpad{
     padding:0;
     margin:0;
-}
-
-%cover{
-    background-size: cover;
-    -ms-behavior: url(/js/vendor/backgroundsize.min.htc);
 }
 
 %default-transition{
@@ -161,20 +120,4 @@ button,input[type="submit"]{
 %psuedo-content{
     content:" ";
     display:block;
-}
-
-
-body,html{
-    display:block;
-    height:100%;
-}
-
-body{
-    font-size:62.5%;
-    position:relative;
-}
-
-html {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }

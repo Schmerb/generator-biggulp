@@ -1,7 +1,6 @@
-@import "partials/base";
+@import "partials/**/*.scss";
 
-
-h1 {
-    color: #b6b6b6;
-    font-size: 4.8em;
-}
+@import "atoms/**/*.scss";
+//@import "molecules/**/*.scss";
+//@import "organisms/**/*.scss";
+//@import "pages/**/*.scss";
