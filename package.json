@@ -26,6 +26,7 @@
     "gulp-imagemin": "^3.0.3",
     "gulp-jshint": "^2.0.1",
     "gulp-livereload": "^3.8.1",
+    "gulp-modernizr": "^1.0.0-alpha",
     "gulp-sass": "^2.3.2",
     "gulp-sass-glob": "^1.0.6",
     "gulp-sourcemaps": "^1.6.0",

@@ -9,3 +9,7 @@ function whatsUp(test) {
 }
 
 // whatsUp('Rob!');
+
+if(!Modernizr.touchevents) {
+    console.log("No touch!");
+}
