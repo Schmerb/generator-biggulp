@@ -1,1 +1,1 @@
-"use strict";function whatsUp(t){$("h1").text(t)}var hello=function(t){console.log(t)};
+"use strict";function whatsUp(e){$("h1").text(e)}var hello=function(e){console.log(e)};Modernizr.touchevents||console.log("No touch!");

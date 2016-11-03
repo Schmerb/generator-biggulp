@@ -4,6 +4,10 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/) 
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.0.4 - 2016-10-28 10:15
+- adding in dynamic modernizr build
+- added in jsint file to customize hinting
+
 ## 0.0.3 - 2016-10-02 14:45
 - adding in scss base styles
 - adding in atomic design and globbing
