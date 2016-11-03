@@ -74,8 +74,8 @@ $max-width:1200px;
     @return map-get(map-get($palettes, $palette), $tone);
 }
 
-@function type($font, $tone: 'regular') {
-    @return map-get(map-get($fontStack, $font), $tone);
+@function type($font, $weight: 'regular') {
+    @return map-get(map-get($fontStack, $font), $weight);
 }
 
 /*//////////////////////////////////////
