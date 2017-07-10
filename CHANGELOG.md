@@ -4,6 +4,10 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/) 
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 1.0.0 - 2017-7-10 13:30
+- Update folder structure to match yeoman's generator-generator
+- Rework template's gulp file.
+
 ## 0.0.4 - 2016-10-28 10:15
 - adding in dynamic modernizr build
 - added in jsint file to customize hinting

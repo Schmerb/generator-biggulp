@@ -1,9 +1,9 @@
 {
-  "name": "generator-hh-boilerplate",
+  "name": "generator-biggulp",
   "version": "1.0.0",
   "description": "Hill Holliday's frontend boiler plate generator",
-  "homepage": "https://github.com/hillholliday/hh-boilerplate",
-  "bugs": "https://github.com/hillholliday/hh-boilerplate/issues",
+  "homepage": "https://github.com/hillholliday/generator-biggulp",
+  "bugs": "https://github.com/hillholliday/generator-biggulp/issues",
   "author": {
     "name": "Hill Holliday",
     "email": "doit@hhcc.com",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:hillholliday/hh-boilerplate.git"
+    "url": "git@github.com:hillholliday/generator-biggulp.git"
   },
   "files": [
     "generators"
