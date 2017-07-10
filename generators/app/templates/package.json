@@ -1,0 +1,43 @@
+{
+  "name": "gulp-plate",
+  "version": "0.1.0",
+  "description": "Revamped version of the boilerplate using gulp instead of grunt",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hillholliday/gulp-plate.git"
+  },
+  "engines": {
+    "node": ">=4.8.0 <4.8.3"
+  },
+  "keywords": [
+    "Gulp",
+    "Boilerplate"
+  ],
+  "author": "Hill Holliday",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hillholliday/gulp-plate/issues"
+  },
+  "homepage": "https://github.com/hillholliday/gulp-plate#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.7",
+    "coffeelint": "^1.15.7",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-harp": "0.0.4",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-jshint": "^2.0.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sass-glob": "^1.0.6",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglifyjs": "^0.6.2",
+    "gulp-util": "^3.0.7",
+    "harp": "^0.20.3",
+    "jshint": "^2.9.3",
+    "jshint-stylish": "^2.2.1",
+    "jstransformer-marked": "^1.0.1",
+    "surge": "^0.18.0"
+  }
+}

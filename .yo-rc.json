@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Ethan Desilets",
+      "authorEmail": "ethan.desilets@hhcc.com",
+      "authorUrl": ""
+    }
+  }
+}

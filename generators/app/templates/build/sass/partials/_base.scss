@@ -1,0 +1,132 @@
+/*//////////////////////////////////////
+// Imports
+//////////////////////////////////////*/
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+//////////////////
+// Colors
+//////////////////
+$palettes: (
+    primary: (
+        base:   #b62025,
+        light:  #d62a32,
+        dark:   #d62a32
+    ),
+    secondary: (
+        base:   #2AD79C,
+        light:  #D9F5EF,
+        dark:   #179E70
+    ),
+    light: (
+        base:   #fff,
+        dark:   #F5F5F5
+    ),
+    dark: (
+        base:   #262626,
+        light:  rgba(#1f1a1b, 0.4)
+    ),
+    social: (
+        facebook:  #3c5290,
+        twitter:   #469aea,
+        instagram: #1b3f67,
+        linkedin:  #3574af,
+        googleplus:#FC1327,
+        pinterest: #D20010,
+        evernote:  #58BD2F,
+        behance:   #005CFF,
+        tumblr:    #1E4865,
+        digg:      #2F75AE,
+        dribbble:  #FF3488,
+        vimeo:     #00BFFF,
+        youtube:   #FF0000,
+        blogger:   #FF2F00
+    )
+);
+
+/*//////////////////////////////////////
+//  Fonts
+//////////////////////////////////////*/
+$fontStack: (
+    sans: (
+        black: 'Lato',
+        bold: 'Lato',
+        regular: 'Lato'
+    ),
+    serif: (
+        regular: $georgia
+    )
+);
+
+/*//////////////////////////////////////
+//  Extension on skeleton
+//////////////////////////////////////*/
+$grid-columns: 12;
+$width:1020px;
+$max-width:1020px;
+
+/*//////////////////////////////////////
+//  Mixins
+//////////////////////////////////////*/
+
+@mixin input-placeholder {
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+/*//////////////////////////////////////
+//  Functions
+//////////////////////////////////////*/
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($palettes, $palette), $tone);
+}
+
+@function type($font, $weight: 'regular') {
+    @return map-get(map-get($fontStack, $font), $weight);
+}
+
+/*//////////////////////////////////////
+//  Silent Classes
+//////////////////////////////////////*/
+%block{
+    max-width:$width;
+    width:100%;
+    margin:0 auto;
+    display:block;
+}
+
+%marpad{
+    padding:0;
+    margin:0;
+}
+
+%default-transition{
+    @include transition(all .3s ease-in-out);
+}
+
+%middle {
+    @include position(relative, 50% auto auto auto);
+    @include transform(translateY(-50%));
+}
+%center {
+    @include position(relative, auto auto auto 50%);
+    @include transform(translateX(-50%));
+}
+
+%absolute-middle{
+    @include position(absolute, 50% auto auto 50%);
+    @include transform(translateY(-50%) translateX(-50%));
+}
+
+%hide-text{
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+%psuedo-content{
+    content:" ";
+    display:block;
+}

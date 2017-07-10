@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+}
+
+body,html{
+    display:block;
+    height:100%;
+}
+
+body{
+    font-size:62.5%;
+    position:relative;
+    font-family:type(sans);
+    color:palette(dark);
+    background-color:palette(light);
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::-moz-selection { 
+    background: rgba(palette(primary),0.75);
+    color:palette(light);
+}
+::selection { 
+    background: rgba(palette(primary),0.75); 
+    color:palette(light);
+}
+
+.block{
+    @extend %block;
+    @include clearfix;
+}
+
+.disable-hover{
+    pointer-events:none;
+}
+
+b,strong{
+    font-weight:700;
+}
+
+i,em{
+    font-style:italic;
+}
+
+body,html,ul,ol{
+    margin:0px;
+    padding:0px;
+}
+
+
+input,button{
+    @include appearance(none);
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+input:focus, textarea:focus,button,input[type="submit"]{
+    outline:none;
+}
+
+button,input[type="submit"]{
+    cursor:pointer;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: palette(light);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: palette(primary,light);
+}

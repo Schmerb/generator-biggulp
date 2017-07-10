@@ -1,49 +1,55 @@
 {
-  "name": "generator-biggulp",
-  "version": "0.3.0",
-  "description": "Revamped version of the boilerplate using gulp instead of grunt",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "generator-hh-boilerplate",
+  "version": "1.0.0",
+  "description": "Hill Holliday's frontend boiler plate generator",
+  "homepage": "https://github.com/hillholliday/hh-boilerplate",
+  "bugs": "https://github.com/hillholliday/hh-boilerplate/issues",
+  "author": {
+    "name": "Hill Holliday",
+    "email": "doit@hhcc.com",
+    "url": "hhcc.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hillholliday/generator-biggulp"
+    "url": "git@github.com:hillholliday/hh-boilerplate.git"
   },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
   "keywords": [
-    "Gulp",
-    "Boilerplate",
+    "hh-generator",
     "yeoman-generator"
   ],
-  "files": [
-    "app"
-  ],
-  "author": "Hill Holliday",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/hillholliday/generator-biggulp/issues"
-  },
-  "homepage": "https://github.com/hillholliday/generator-biggulp/blob/master/README.md",
   "devDependencies": {
+    "eslint": "^4.1.0",
+    "eslint-config-xo-space": "^0.16.0",
     "gulp": "^3.9.1",
-    "gulp-accessibility": "^3.0.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-cssmin": "^0.1.7",
-    "gulp-imagemin": "^3.0.3",
-    "gulp-jshint": "^2.0.1",
-    "gulp-livereload": "^3.8.1",
-    "gulp-modernizr": "^1.0.0-alpha",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2",
-    "gulp-sass-glob": "^1.0.6",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglifyjs": "^0.6.2",
-    "gulp-util": "^3.0.7",
-    "jshint": "^2.9.3",
-    "jshint-stylish": "^2.2.1",
-    "require-dir": "^0.3.1"
+    "jest": "^19.0.2",
+    "jest-cli": "^20.0.0",
+    "nsp": "^2.6.3",
+    "yeoman-assert": "^3.0.0",
+    "yeoman-test": "^1.6.0"
   },
   "dependencies": {
-    "yeoman-generator": "^0.24.1"
-  }
+    "chalk": "^1.1.3",
+    "yeoman-generator": "^1.1.1",
+    "yosay": "^2.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "prepublish": "nsp check",
+    "pretest": "eslint . --fix",
+    "test": "jest"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "jest": true,
+      "node": true
+    }
+  },
+  "license": "MIT"
 }
